@@ -56,6 +56,10 @@
 		85475D4D258963D00018D09A /* iosproj */ = {
 			isa = PBXGroup;
 			children = (
+				85475D66258964B70018D09A /* Utils */,
+				85475D65258964B00018D09A /* Controllers */,
+				85475D64258964AB0018D09A /* Views */,
+				85475D63258964A20018D09A /* Models */,
 				85475D4E258963D00018D09A /* AppDelegate.swift */,
 				85475D50258963D00018D09A /* SceneDelegate.swift */,
 				85475D52258963D00018D09A /* ViewController.swift */,
@@ -65,6 +69,34 @@
 				85475D5C258963D10018D09A /* Info.plist */,
 			);
 			path = iosproj;
+			sourceTree = "<group>";
+		};
+		85475D63258964A20018D09A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85475D64258964AB0018D09A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85475D65258964B00018D09A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85475D66258964B70018D09A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
