@@ -77,6 +77,13 @@ Dependencies/
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
+### Xcode Path ###
+*.xcodeproj/*
+!*.xcodeproj/iosproj.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
