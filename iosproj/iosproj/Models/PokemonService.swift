@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import PokemonAPI
+
+class PokemonService {
+    public static let shared = PokemonAPI().pokemonService
+    
+}
