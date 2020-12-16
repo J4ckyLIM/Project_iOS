@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-iosproj/Pods-iosproj-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/PokemonAPI/PokemonAPI.framework

@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.4.0)
+  - PokemonAPI (6.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - PokemonAPI
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - PokemonAPI
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  PokemonAPI: bff9656c1825288e7f028b415ce6276122ad4c6a
 
-PODFILE CHECKSUM: 9c33c9dd80b1f19e2df882bb534e3e441f368651
+PODFILE CHECKSUM: 87a5c6a575ac4d49b3229528c244808e905391ed
 
 COCOAPODS: 1.10.0.rc.1
