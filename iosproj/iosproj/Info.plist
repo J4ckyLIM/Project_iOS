@@ -69,11 +69,11 @@
 			<key>pokeapi.co</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
-					<true/>
+				<true/>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-					<true/>
+				<true/>
 				<key>NSTemporaryExceptionMinimumTLSVersion</key>
-					<string>TLSv1.2</string>
+				<string>TLSv1.2</string>
 			</dict>
 		</dict>
 	</dict>
