@@ -1,13 +1,13 @@
 //
-//  TestViewController.swift
+//  PokemonListViewController.swift
 //  iosproj
 //
-//  Created by Jacky LIM on 15/12/2020.
+//  Created by Jacky LIM on 16/12/2020.
 //
 
 import UIKit
 
-class TestViewController: UIViewController {
+class PokemonListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
