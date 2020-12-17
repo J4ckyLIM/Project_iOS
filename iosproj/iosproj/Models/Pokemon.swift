@@ -2,41 +2,59 @@
 //  Pokemon.swift
 //  iosproj
 //
-//  Created by Jacky LIM on 16/12/2020.
+//  Created by Jacky LIM on 17/12/2020.
 //
 
-import Foundation
+import UIKit
 
 class Pokemon {
-//    var id: Int
-    var name: String
-//    var base_exp: Int
-//    var height: Int
-//    var stats: [PokemonStats]
-//    var types: [PokemonType]
     
-    init(/*id: Int ,*/ name: String/*, base_exp: Int?, height: Int?, stats: [PokemonStats]?, types: [PokemonType]? */) {
-//        self.id = id
-        self.name = name
-//        self.base_exp = base_exp!
-//        self.height = height!
-//        self.stats = stats!
-//        self.types = types!
+    var name: String?
+    var imageUrl: String?
+    var image: UIImage?
+    var id: Int?
+    var weight: Int?
+    var height: Int?
+    var defense: Int?
+    var attack: Int?
+    var description: String?
+    var type: String?
+    
+    init(id: Int, dictionary: [String: AnyObject]) {
+        
+        self.id = id
+        
+        if let name = dictionary["name"] as? String {
+            self.name = name
+        }
+        
+        if let imageUrl = dictionary["imageUrl"] as? String {
+            self.imageUrl = imageUrl
+        }
+        
+        if let weight = dictionary["weight"] as? Int {
+            self.weight = weight
+        }
+        
+        if let height = dictionary["height"] as? Int {
+            self.height = height
+        }
+        
+        if let defense = dictionary["defense"] as? Int {
+            self.defense = defense
+        }
+        
+        if let attack = dictionary["attack"] as? Int {
+            self.attack = attack
+        }
+        
+        if let description = dictionary["description"] as? String {
+            self.description = description
+        }
+        
+        if let type = dictionary["type"] as? String {
+            self.type = type.capitalized
+        }
     }
 }
 
-struct PokemonStats {
-    var stat: NameAndUrl
-    var effort: Int
-    var base_stat: Int
-}
-
-struct PokemonType {
-    var slot: Int
-    var type: NameAndUrl
-}
-
-struct NameAndUrl {
-    var name: String
-    var url: String
-}

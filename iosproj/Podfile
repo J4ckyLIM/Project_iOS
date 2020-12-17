@@ -8,6 +8,5 @@ target 'iosproj' do
   # Pods for iosproj
   
   pod 'Alamofire', '~> 5.2'
-  pod 'PokemonAPI'
 
 end
