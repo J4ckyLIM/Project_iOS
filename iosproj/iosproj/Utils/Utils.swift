@@ -32,3 +32,13 @@ func getColorForType(color: String) -> String{
     }
 }
 
+extension String {
+    func firstLetterToUpperCase() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func firstLetterToUpperCase() {
+        self = self.firstLetterToUpperCase()
+    }
+}
+

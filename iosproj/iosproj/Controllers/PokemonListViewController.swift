@@ -61,15 +61,10 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-//            vc.selectedImage = Image(name: pictures[indexPath.row])
-//
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
         if let vc = storyboard?.instantiateViewController(withIdentifier: "PokemonDetail") as? PokemonDetailViewController {
             vc.pokemon = pokemons[indexPath.row]
             
-            navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true)
         }
     }
     

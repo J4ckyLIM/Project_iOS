@@ -21,7 +21,7 @@ class PokemonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pokemonName.text = self.pokemon?.name
+        pokemonName.text = self.pokemon?.name?.firstLetterToUpperCase()
         pokemonId.text = self.pokemon?.type
         pokemonImage.image = self.pokemon?.image
         pokemonDescription.text = self.pokemon?.description
