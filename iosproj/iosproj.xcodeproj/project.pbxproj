@@ -20,6 +20,7 @@
 		85475DAB258A7DEC0018D09A /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DAA258A7DEC0018D09A /* PokemonService.swift */; };
 		85475DB5258B555D0018D09A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DB4258B555D0018D09A /* Pokemon.swift */; };
 		85475DD2258BB32F0018D09A /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DD1258BB32F0018D09A /* PokemonCell.swift */; };
+		85475DDB258BCB4A0018D09A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DDA258BCB4A0018D09A /* Utils.swift */; };
 		D91939498F8E14EEDF26A261 /* Pods_iosproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4204FAD1E4ED21DB29F897E8 /* Pods_iosproj.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		85475DAA258A7DEC0018D09A /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		85475DB4258B555D0018D09A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		85475DD1258BB32F0018D09A /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		85475DDA258BCB4A0018D09A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		85475D66258964B70018D09A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				85475DDA258BCB4A0018D09A /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				85475DB5258B555D0018D09A /* Pokemon.swift in Sources */,
 				85475DD2258BB32F0018D09A /* PokemonCell.swift in Sources */,
 				85475D4F258963D00018D09A /* AppDelegate.swift in Sources */,
+				85475DDB258BCB4A0018D09A /* Utils.swift in Sources */,
 				85475D51258963D00018D09A /* SceneDelegate.swift in Sources */,
 				85475D9C258A60C30018D09A /* PokemonListViewController.swift in Sources */,
 				85475D6F258966A90018D09A /* LoadingUiView.swift in Sources */,

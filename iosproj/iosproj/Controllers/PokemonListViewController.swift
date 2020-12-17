@@ -55,7 +55,7 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
         cell.pokemonName?.text = "pokfodjfdj"
 //        cell.pokemonName?.text = pokemons[indexPath.row].name!
 //        cell.pokemonImage?.image = pokemons[indexPath.row].image!
-        
+
         return cell
     }
     
