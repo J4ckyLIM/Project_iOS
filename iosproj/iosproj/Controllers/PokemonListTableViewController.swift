@@ -10,39 +10,9 @@ import UIKit
 class PokemonListTableViewController: UITableViewController {
     
     let pokemonService = PokemonService.shared
-    
-    var listOfPokemons:[Any] = []
-    
-    var nameOfPokemon: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.getListOfPokemons()
-    }
-    
-    func getListOfPokemons() {
-        pokemonService.fetchPokemonList() { result in
-            switch result {
-            case .success(let pokemons):
-                self.listOfPokemons = pokemons.results!
-                print(pokemons.results![0])
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    func getPokemonByName(name: String) {
-        pokemonService.fetchPokemon(name) { result in
-            switch result {
-            case .success(let pokemon):
-                print(pokemon)
-                self.listOfPokemons = [pokemon]
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
     }
 
     // MARK: - Table view data source
