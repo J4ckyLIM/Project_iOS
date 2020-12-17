@@ -19,17 +19,7 @@ class DiscoverPokemonViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func getRandomPokemon(id: Int) {
-        pokemonService.fetchPokemon(id) { result in
-            switch result {
-            case .success(let pokemon):
-                print(pokemon)
-                self.currentDisplayedPokemon = pokemon
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
+    
     
 
     /*

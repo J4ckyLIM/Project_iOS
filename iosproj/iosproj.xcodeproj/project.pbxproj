@@ -19,6 +19,7 @@
 		85475D9C258A60C30018D09A /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475D9B258A60C30018D09A /* PokemonListViewController.swift */; };
 		85475D9F258A73270018D09A /* DiscoverPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475D9E258A73270018D09A /* DiscoverPokemonViewController.swift */; };
 		85475DAB258A7DEC0018D09A /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DAA258A7DEC0018D09A /* PokemonService.swift */; };
+		85475DB5258B555D0018D09A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DB4258B555D0018D09A /* Pokemon.swift */; };
 		D91939498F8E14EEDF26A261 /* Pods_iosproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4204FAD1E4ED21DB29F897E8 /* Pods_iosproj.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		85475D9B258A60C30018D09A /* PokemonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewController.swift; sourceTree = "<group>"; };
 		85475D9E258A73270018D09A /* DiscoverPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPokemonViewController.swift; sourceTree = "<group>"; };
 		85475DAA258A7DEC0018D09A /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
+		85475DB4258B555D0018D09A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		85475D4D258963D00018D09A /* iosproj */ = {
 			isa = PBXGroup;
 			children = (
+				85475DB3258B55150018D09A /* Services */,
 				85475D66258964B70018D09A /* Utils */,
 				85475D65258964B00018D09A /* Controllers */,
 				85475D64258964AB0018D09A /* Views */,
@@ -101,7 +104,7 @@
 		85475D63258964A20018D09A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				85475DAA258A7DEC0018D09A /* PokemonService.swift */,
+				85475DB4258B555D0018D09A /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,6 +134,14 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		85475DB3258B55150018D09A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85475DAA258A7DEC0018D09A /* PokemonService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CC9A9028EC351D4B59B7847F /* Frameworks */ = {
@@ -260,6 +271,7 @@
 				85475D53258963D00018D09A /* SplashScreenViewController.swift in Sources */,
 				85475D96258A5CEB0018D09A /* PokemonListTableViewController.swift in Sources */,
 				85475D99258A5E8C0018D09A /* PokemonDetailViewController.swift in Sources */,
+				85475DB5258B555D0018D09A /* Pokemon.swift in Sources */,
 				85475D4F258963D00018D09A /* AppDelegate.swift in Sources */,
 				85475D51258963D00018D09A /* SceneDelegate.swift in Sources */,
 				85475D9C258A60C30018D09A /* PokemonListViewController.swift in Sources */,
