@@ -10,6 +10,7 @@ import UIKit
 private let cellIdentifier = "CollectionCell"
 
 class PokemonListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var pokemonCollection: UICollectionView!
     
     var pokemons = [Pokemon]()
@@ -31,7 +32,6 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
         
         fetchPokemons()
     
-
     }
     
     func fetchPokemons() {
@@ -43,14 +43,26 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     
+    
+    @IBAction func searchPokemon(_ sender: Any) {
+        var searchText = self.searchField.text
+        
+        if searchText == ""  {
+            fetchPokemons()
+        }
+        else {
+            self.pokemons =  self.pokemons.filter({ $0.name?.range(of: (searchText?.lowercased())!) != nil })
+            
+            pokemonCollection.reloadData()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(self.pokemons.count)
         return self.pokemons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = pokemonCollection.dequeueReusableCell(withReuseIdentifier: "PokemonCell", for: indexPath) as! PokemonCell
-        print(pokemons[indexPath.row].name!)
         cell.backgroundColor = UIColor.black
         cell.pokemonName?.text = "pokfodjfdj"
 //        cell.pokemonName?.text = pokemons[indexPath.row].name!
