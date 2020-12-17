@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Huf-WC-FVz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -8,22 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Splash Screen View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="iosproj" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="141" y="76"/>
-        </scene>
-        <!--Item-->
+        <!--Pokemon List View Controller-->
         <scene sceneID="iBF-kO-vD7">
             <objects>
                 <viewController id="1da-xd-a2n" customClass="PokemonListViewController" customModule="iosproj" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-M1-LdL">
-                                <rect key="frame" x="5" y="44" width="404" height="769"/>
+                                <rect key="frame" x="5" y="88" width="404" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5k-Is-Klw">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
@@ -56,7 +41,7 @@
                                         </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uKB-hh-Ue7">
-                                        <rect key="frame" x="0.0" y="60" width="404" height="709"/>
+                                        <rect key="frame" x="0.0" y="60" width="404" height="665"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lWj-aQ-nuz">
@@ -125,40 +110,11 @@
                             <constraint firstItem="30g-4M-VhU" firstAttribute="trailing" secondItem="WCq-M1-LdL" secondAttribute="trailing" constant="5" id="qR1-If-o6h"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zDE-VQ-yaO"/>
+                    <navigationItem key="navigationItem" id="S5R-5R-FiR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c03-Xc-oBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="-609"/>
-        </scene>
-        <!--Pokémons-->
-        <scene sceneID="bvn-0D-xv6">
-            <objects>
-                <tableViewController id="SfP-0D-6qG" customClass="PokemonListTableViewController" customModule="iosproj" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aJt-sy-UcT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="k1X-4E-3iO">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k1X-4E-3iO" id="5oh-Gd-Lnr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="SfP-0D-6qG" id="81M-oP-DLn"/>
-                            <outlet property="delegate" destination="SfP-0D-6qG" id="hIh-5L-TfH"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Pokémons" id="Uec-hH-pBY"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hT7-Qn-R8j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1976.8115942028987" y="75.669642857142847"/>
+            <point key="canvasLocation" x="3808.6956521739135" y="-593.97321428571422"/>
         </scene>
         <!--Découverte-->
         <scene sceneID="gv2-i4-4Tb">
@@ -198,12 +154,12 @@
                             <constraint firstItem="oaO-1a-xkp" firstAttribute="trailing" secondItem="Nfk-TK-nC5" secondAttribute="trailing" constant="5" id="jW5-fX-88X"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Découverte" id="1z7-ms-nVP"/>
+                    <tabBarItem key="tabBarItem" title="Découverte" image="star" catalog="system" id="1z7-ms-nVP"/>
                     <navigationItem key="navigationItem" id="o9r-4G-cya"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7f-2p-dHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="787"/>
+            <point key="canvasLocation" x="2899" y="520"/>
         </scene>
         <!--Pokemon Detail View Controller-->
         <scene sceneID="R4B-5V-eKp">
@@ -357,29 +313,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88c-X0-pSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923" y="76"/>
+            <point key="canvasLocation" x="3809" y="248"/>
         </scene>
         <!--Pokémons-->
         <scene sceneID="jd7-MT-g56">
             <objects>
-                <tabBarController title="Pokémons" automaticallyAdjustsScrollViewInsets="NO" id="Huf-WC-FVz" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" title="Pokémons" automaticallyAdjustsScrollViewInsets="NO" id="Huf-WC-FVz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wpg-dw-afg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="SfP-0D-6qG" kind="relationship" relationship="viewControllers" id="eod-VU-SD8"/>
-                        <segue destination="BFL-tV-RnJ" kind="relationship" relationship="viewControllers" id="TWP-R0-vZw"/>
-                        <segue destination="1da-xd-a2n" kind="relationship" relationship="viewControllers" id="pTm-t2-Fl4"/>
+                        <segue destination="OVN-kF-Wll" kind="relationship" relationship="viewControllers" id="pTm-t2-Fl4"/>
+                        <segue destination="BFL-tV-RnJ" kind="relationship" relationship="viewControllers" id="r4f-lU-VJQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0k-3o-rl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.6666666666667" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1976.8115942028987" y="75.669642857142847"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="33P-75-4x5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OVN-kF-Wll" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="zDE-VQ-yaO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LHu-mW-u5Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1da-xd-a2n" kind="relationship" relationship="rootViewController" id="ZXM-kJ-sXd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzc-8f-NTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="-594.64285714285711"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
