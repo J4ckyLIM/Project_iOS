@@ -19,6 +19,7 @@ class DiscoverPokemonViewController: UIViewController {
     @IBOutlet weak var namePokLabel: UILabel!
     // let pokemonService = PokemonService.shared
     var pokemonArray = [Pokemon]()
+    var pokemon: Pokemon?
    
     
     
