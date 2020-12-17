@@ -8,12 +8,18 @@
 import UIKit
 
 class PokemonDetailViewController: UIViewController {
-
+    
+    var pokemon: Pokemon?
+    @IBOutlet weak var pokemonName: UILabel!
+    
+    @IBOutlet weak var pokemonImage: UIImageView!
+    @IBOutlet weak var pokemonId: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        
+        pokemonName.text = self.pokemon?.name
+        pokemonId.text = String((self.pokemon?.id)!)
+        pokemonImage.image = self.pokemon?.image    }
     
 
     /*

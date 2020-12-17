@@ -11,6 +11,7 @@ class PokemonListTableViewController: UITableViewController {
     
     let pokemonService = PokemonService.shared
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

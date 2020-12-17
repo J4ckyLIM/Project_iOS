@@ -19,6 +19,7 @@
 		85475D9F258A73270018D09A /* DiscoverPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475D9E258A73270018D09A /* DiscoverPokemonViewController.swift */; };
 		85475DAB258A7DEC0018D09A /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DAA258A7DEC0018D09A /* PokemonService.swift */; };
 		85475DB5258B555D0018D09A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DB4258B555D0018D09A /* Pokemon.swift */; };
+		85475DD2258BB32F0018D09A /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475DD1258BB32F0018D09A /* PokemonCell.swift */; };
 		D91939498F8E14EEDF26A261 /* Pods_iosproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4204FAD1E4ED21DB29F897E8 /* Pods_iosproj.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		85475D9E258A73270018D09A /* DiscoverPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPokemonViewController.swift; sourceTree = "<group>"; };
 		85475DAA258A7DEC0018D09A /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		85475DB4258B555D0018D09A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		85475DD1258BB32F0018D09A /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				85475D6E258966A90018D09A /* LoadingUiView.swift */,
+				85475DD1258BB32F0018D09A /* PokemonCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				85475D96258A5CEB0018D09A /* PokemonListTableViewController.swift in Sources */,
 				85475D99258A5E8C0018D09A /* PokemonDetailViewController.swift in Sources */,
 				85475DB5258B555D0018D09A /* Pokemon.swift in Sources */,
+				85475DD2258BB32F0018D09A /* PokemonCell.swift in Sources */,
 				85475D4F258963D00018D09A /* AppDelegate.swift in Sources */,
 				85475D51258963D00018D09A /* SceneDelegate.swift in Sources */,
 				85475D9C258A60C30018D09A /* PokemonListViewController.swift in Sources */,
