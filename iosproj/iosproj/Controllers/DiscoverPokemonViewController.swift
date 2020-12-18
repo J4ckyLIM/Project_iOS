@@ -9,34 +9,60 @@ import UIKit
 
 class DiscoverPokemonViewController: UIViewController {
     
-    let pokemonService = PokemonService.shared
-    
-    // Créer une variable gesture
-    // Autoriser la gesture sur la vue (view)
-    // Definir la gesture (swip/tap/pinch)
-    // Creer une fonction d'action (@objec func) pour charger une nouveau pokemon dependant de la gesture (random integer entre 1 et 155)
-    // Créer une variable pokemons de type array de pokemon
-    // récuperer les datas d'un pokémon grace au pokemon service
-    // afficher les datas du pokemon sur l'ecran
-
+   
+    @IBOutlet weak var StackViewPokemon: UIStackView!
+    @IBOutlet weak var imgPok: UIImageView!
+    @IBOutlet weak var typePokLabel: UILabel!
+    @IBOutlet weak var namePokLabel: UILabel!
+    var pokemonArray = [Pokemon]()
+    var pokemon: Pokemon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      
+        StackViewPokemon.isUserInteractionEnabled = true
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture(sendr:)))
+        swipeRight.direction = .right
+        StackViewPokemon.addGestureRecognizer(swipeRight)
+            
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture(sendr:)))
+        swipeLeft.direction = .left
+        StackViewPokemon.addGestureRecognizer(swipeLeft)
+        
+        fetchPokemon()
+ 
     }
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fetchPokemon() {
+        PokemonService.shared.fetchPokemon { (pokemonArray) in
+          DispatchQueue.main.sync{
+            self.pokemonArray = pokemonArray
+            self.pokemon = pokemonArray[0]
+            self.displayPokemon(pokemon: self.pokemon!)
+          }
+        }
     }
-    */
+    
+    func displayPokemon(pokemon: Pokemon) {
+        self.imgPok.image = pokemon.image!
+        self.namePokLabel.text = pokemon.name!
+        self.typePokLabel.text = pokemon.type!
+    }
+    
+    @objc func swipeGesture(sendr: UISwipeGestureRecognizer?) {
+        if let swipeGesture = sendr {
+            switch swipeGesture.direction {
+            case .right:
+                displayPokemon(pokemon: pokemonArray[Int.random(in: 0...75)])
+                
+            case .left:
+                displayPokemon(pokemon: pokemonArray[Int.random(in: 76...150)])
+            default:
+                break
+            }
+        }
+    }
 
 }
