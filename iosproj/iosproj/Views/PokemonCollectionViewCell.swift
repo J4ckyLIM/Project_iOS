@@ -14,6 +14,11 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.layer.cornerRadius = 7
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func configureCell(pokemon: Pokemon) {

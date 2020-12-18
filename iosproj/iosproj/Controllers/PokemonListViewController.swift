@@ -11,9 +11,12 @@ private let cellIdentifier = "CollectionCell"
 
 class PokemonListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var pokemonCollection: UICollectionView!
     
     var pokemons = [Pokemon]()
+    
+    var filteredPokemons = [Pokemon]()
     
     let sectionInsets = UIEdgeInsets(top: 30.0,
                                      left: 15.0,
@@ -22,6 +25,10 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.searchButton.layer.borderWidth = 1
+        self.searchButton.layer.cornerRadius = 5
+        self.searchButton.layer.masksToBounds = true
         
         self.navigationController?.isNavigationBarHidden = true
         
@@ -39,6 +46,7 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
         PokemonService.shared.fetchPokemon { (pokemons) in
             DispatchQueue.main.async {
                 self.pokemons = pokemons
+                self.filteredPokemons = pokemons
                 self.pokemonCollection.reloadData()
             }
         }
@@ -48,24 +56,39 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
     @IBAction func searchPokemon(_ sender: Any) {
         var searchText = self.searchField.text
         
-        if searchText == ""  {
+        if searchText == ""{
+            self.filteredPokemons = self.pokemons
+        }
+        else {
+            let tempListPokemons = self.pokemons
+            self.filteredPokemons =  tempListPokemons.filter({ $0.name?.range(of: (searchText?.lowercased())!) != nil })
+            
+            pokemonCollection.reloadData()
+        }
+    }
+    
+    @IBAction func searchPokemonByInput(_ sender: UITextField) {
+        
+        var search = sender.text!
+        
+        if search == "" {
             fetchPokemons()
         }
         else {
-            self.pokemons =  self.pokemons.filter({ $0.name?.range(of: (searchText?.lowercased())!) != nil })
+            let tempListPokemons = self.pokemons
+            self.filteredPokemons =  tempListPokemons.filter({ $0.name?.range(of: (search.lowercased())) != nil })
             
             pokemonCollection.reloadData()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.pokemons.count
+        return self.filteredPokemons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = pokemonCollection.dequeueReusableCell(withReuseIdentifier: "PokemonCell", for: indexPath) as! PokemonCollectionViewCell
-        cell.backgroundColor = UIColor.black
-        cell.configureCell(pokemon: pokemons[indexPath.row])
+        cell.configureCell(pokemon: filteredPokemons[indexPath.row])
 
         return cell
     }
@@ -73,24 +96,20 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "PokemonDetail") as? PokemonDetailViewController {
-            vc.pokemon = pokemons[indexPath.row]
+            vc.pokemon = filteredPokemons[indexPath.row]
             
             self.present(vc, animated: true)
         }
     }
-    
-    
-    
-    
     
     // MARK: - Collection View Flow Layout Delegate
     func collectionView(_ collectionView: UICollectionView,
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
         //2
-        let paddingSpace = sectionInsets.left * (3 + 1)
+        let paddingSpace = sectionInsets.left * 0.3
         let availableWidth =  view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / 3
+        let widthPerItem = availableWidth / 4
 
         return CGSize(width: widthPerItem, height: widthPerItem)
       }
@@ -106,11 +125,6 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
                           minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left / 2
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-    
     
 
 }

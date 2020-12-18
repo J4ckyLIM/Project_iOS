@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,78 +17,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-M1-LdL">
-                                <rect key="frame" x="5" y="88" width="404" height="725"/>
+                                <rect key="frame" x="5" y="103" width="404" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5k-Is-Klw">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="37"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rechercher un pokémon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgz-xu-0jy">
-                                                <rect key="frame" x="0.0" y="0.0" width="284" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="37"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="filterPokemonByInput:forEvent:" destination="1da-xd-a2n" eventType="editingDidEnd" id="NiA-Ce-Teo"/>
+                                                    <action selector="searchPokemonByInput:" destination="1da-xd-a2n" eventType="editingChanged" id="TCN-Ld-8sw"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HV-gG-23A">
-                                                <rect key="frame" x="284" y="0.0" width="120" height="34"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="284" y="0.0" width="120" height="37"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="xTP-RI-bqx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                                <state key="normal" title="Rechercher"/>
                                                 <connections>
                                                     <action selector="searchPokemon:" destination="1da-xd-a2n" eventType="touchUpInside" id="lzA-jc-dqM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="kP5-df-fkb"/>
+                                            <constraint firstAttribute="height" constant="40" id="kP5-df-fkb"/>
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Qo1-zF-vqB">
-                                        <rect key="frame" x="0.0" y="34" width="404" height="691"/>
+                                        <rect key="frame" x="0.0" y="37" width="404" height="688"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6DD-ac-e98">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" sectionInsetReference="layoutMargins" id="6DD-ac-e98">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="15" minY="30" maxX="15" maxY="15"/>
                                         </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Lyq-aJ-24a">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cE1-pJ-guX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkQ-fv-yyw">
-                                                            <rect key="frame" x="49.5" y="70" width="41.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-0D-i8O">
-                                                            <rect key="frame" x="0.0" y="8" width="140" height="140"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="140" id="DoA-cb-nZ6"/>
-                                                                <constraint firstAttribute="height" constant="140" id="yAb-im-dt3"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="BkQ-fv-yyw" firstAttribute="centerY" secondItem="cE1-pJ-guX" secondAttribute="centerY" id="58x-9m-j5g"/>
-                                                        <constraint firstItem="ebm-0D-i8O" firstAttribute="top" secondItem="cE1-pJ-guX" secondAttribute="topMargin" id="9Rl-6R-pVz"/>
-                                                        <constraint firstItem="ebm-0D-i8O" firstAttribute="centerX" secondItem="BkQ-fv-yyw" secondAttribute="centerX" id="LWM-gw-hXQ"/>
-                                                        <constraint firstItem="BkQ-fv-yyw" firstAttribute="centerX" secondItem="cE1-pJ-guX" secondAttribute="centerX" id="e5R-eA-rTU"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="140" height="160"/>
-                                                <connections>
-                                                    <outlet property="pokemonImage" destination="ebm-0D-i8O" id="fde-lW-rBT"/>
-                                                    <outlet property="pokemonName" destination="BkQ-fv-yyw" id="zUv-98-mBW"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <cells/>
                                     </collectionView>
                                 </subviews>
                             </stackView>
@@ -97,7 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="30g-4M-VhU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WCq-M1-LdL" firstAttribute="top" secondItem="30g-4M-VhU" secondAttribute="top" id="ZC0-BL-lzZ"/>
+                            <constraint firstItem="WCq-M1-LdL" firstAttribute="top" secondItem="30g-4M-VhU" secondAttribute="top" constant="15" id="ZC0-BL-lzZ"/>
                             <constraint firstItem="WCq-M1-LdL" firstAttribute="leading" secondItem="30g-4M-VhU" secondAttribute="leading" constant="5" id="Zcs-TO-Duv"/>
                             <constraint firstItem="30g-4M-VhU" firstAttribute="bottom" secondItem="WCq-M1-LdL" secondAttribute="bottom" id="p2o-vs-o5m"/>
                             <constraint firstItem="30g-4M-VhU" firstAttribute="trailing" secondItem="WCq-M1-LdL" secondAttribute="trailing" constant="5" id="qR1-If-o6h"/>
@@ -106,6 +75,7 @@
                     <navigationItem key="navigationItem" id="S5R-5R-FiR"/>
                     <connections>
                         <outlet property="pokemonCollection" destination="Qo1-zF-vqB" id="dF4-hY-DKQ"/>
+                        <outlet property="searchButton" destination="2HV-gG-23A" id="J2y-WG-3wh"/>
                         <outlet property="searchField" destination="lgz-xu-0jy" id="a1d-PL-Dzs"/>
                     </connections>
                 </viewController>
@@ -348,9 +318,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,27 +17,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQT-ft-fz1">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN4-AL-qv6">
-                        <rect key="frame" x="0.0" y="134" width="140" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="0.0" y="135.5" width="140" height="24.5"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQT-ft-fz1">
+                        <rect key="frame" x="14" y="13" width="112" height="105"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="hN4-AL-qv6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1mF-eR-s7B"/>
-                <constraint firstAttribute="trailing" secondItem="uQT-ft-fz1" secondAttribute="trailing" id="1x7-kN-sjt"/>
+                <constraint firstAttribute="trailing" secondItem="uQT-ft-fz1" secondAttribute="trailing" constant="15" id="1x7-kN-sjt"/>
                 <constraint firstAttribute="trailing" secondItem="hN4-AL-qv6" secondAttribute="trailing" id="2dB-ak-4LG"/>
                 <constraint firstItem="uQT-ft-fz1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KYN-4L-kNB"/>
                 <constraint firstAttribute="bottom" secondItem="uQT-ft-fz1" secondAttribute="bottom" constant="30" id="Xe1-Q2-exy"/>
-                <constraint firstAttribute="bottom" secondItem="hN4-AL-qv6" secondAttribute="bottom" constant="4" id="ZIv-gQ-L5G"/>
-                <constraint firstItem="uQT-ft-fz1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dDY-Od-76F"/>
-                <constraint firstItem="hN4-AL-qv6" firstAttribute="top" secondItem="uQT-ft-fz1" secondAttribute="bottom" constant="4" id="iN8-xJ-Nfa"/>
+                <constraint firstAttribute="bottom" secondItem="hN4-AL-qv6" secondAttribute="bottom" id="ZIv-gQ-L5G"/>
+                <constraint firstItem="uQT-ft-fz1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="dDY-Od-76F"/>
                 <constraint firstAttribute="bottom" secondItem="uQT-ft-fz1" secondAttribute="bottom" constant="30" id="o2C-JV-8Vx"/>
             </constraints>
             <size key="customSize" width="140" height="160"/>
@@ -47,4 +50,9 @@
             <point key="canvasLocation" x="202.89855072463769" y="93.75"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
