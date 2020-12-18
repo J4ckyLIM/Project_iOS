@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SwiftUI
+
 private let cellIdentifier = "CollectionCell"
 
 class PokemonListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -80,6 +82,11 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
             
             pokemonCollection.reloadData()
         }
+    }
+    
+    
+    @IBSegueAction func showContact(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ContactView())
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

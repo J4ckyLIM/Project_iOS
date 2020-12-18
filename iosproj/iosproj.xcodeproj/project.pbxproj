@@ -101,7 +101,6 @@
 				85475D4E258963D00018D09A /* AppDelegate.swift */,
 				85475D50258963D00018D09A /* SceneDelegate.swift */,
 				85475D54258963D00018D09A /* Main.storyboard */,
-				40C94EEF258B955100B60610 /* ContactView.swift */,
 				85475D57258963D10018D09A /* Assets.xcassets */,
 				85475D59258963D10018D09A /* LaunchScreen.storyboard */,
 				85475D5C258963D10018D09A /* Info.plist */,
@@ -120,6 +119,7 @@
 		85475D64258964AB0018D09A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40C94EEF258B955100B60610 /* ContactView.swift */,
 				85475D6E258966A90018D09A /* LoadingUiView.swift */,
 				85C75AF6258CA40C001311E9 /* PokemonCollectionViewCell.swift */,
 				85C75AF7258CA40C001311E9 /* PokemonCollectionViewCell.xib */,
