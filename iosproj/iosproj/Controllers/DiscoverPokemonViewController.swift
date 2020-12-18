@@ -47,7 +47,7 @@ class DiscoverPokemonViewController: UIViewController {
     
     func displayPokemon(pokemon: Pokemon) {
         self.imgPok.image = pokemon.image!
-        self.namePokLabel.text = pokemon.name!
+        self.namePokLabel.text = pokemon.name!.firstLetterToUpperCase()
         self.typePokLabel.text = pokemon.type!
     }
     
