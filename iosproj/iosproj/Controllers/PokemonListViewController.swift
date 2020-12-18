@@ -28,7 +28,8 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
         self.pokemonCollection.dataSource = self
         self.pokemonCollection.delegate = self
 
-        self.pokemonCollection.register(PokemonCell.self, forCellWithReuseIdentifier: "PokemonCell")
+        
+        self.pokemonCollection.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCell")
         
         fetchPokemons()
     
@@ -62,11 +63,9 @@ class PokemonListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = pokemonCollection.dequeueReusableCell(withReuseIdentifier: "PokemonCell", for: indexPath) as! PokemonCell
+        let cell = pokemonCollection.dequeueReusableCell(withReuseIdentifier: "PokemonCell", for: indexPath) as! PokemonCollectionViewCell
         cell.backgroundColor = UIColor.black
-        cell.pokemonName?.text = "pokfodjfdj"
-//        cell.pokemonName?.text = pokemons[indexPath.row].name!
-//        cell.pokemonImage?.image = pokemons[indexPath.row].image!
+        cell.configureCell(pokemon: pokemons[indexPath.row])
 
         return cell
     }
