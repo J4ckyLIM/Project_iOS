@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AMProgressHUD
 
 class DiscoverPokemonViewController: UIViewController {
     
@@ -19,6 +20,11 @@ class DiscoverPokemonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AMProgressHUD.show()
+        
+        self.view.layer.cornerRadius = 30
+        self.view.layer.masksToBounds = true
+        self.view.layer.borderWidth = 15
       
         StackViewPokemon.isUserInteractionEnabled = true
         
@@ -41,6 +47,7 @@ class DiscoverPokemonViewController: UIViewController {
             self.pokemonArray = pokemonArray
             self.pokemon = pokemonArray[0]
             self.displayPokemon(pokemon: self.pokemon!)
+            AMProgressHUD.dismiss()
           }
         }
     }

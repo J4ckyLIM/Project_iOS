@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AMProgressHUD
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AMProgressHUD.options.imageName = "pok"
+        AMProgressHUD.options.backgroundColor = .clear
+        AMProgressHUD.options.animationRepeatCount = 2
+        AMProgressHUD.options.cancable = true
         do {
             sleep(3)
         }

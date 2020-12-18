@@ -124,28 +124,32 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-TK-nC5">
                                 <rect key="frame" x="5" y="54" width="404" height="749"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du pokemon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NU-Ud-uhl">
-                                        <rect key="frame" x="73" y="0.0" width="258.5" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pokemon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NU-Ud-uhl">
+                                        <rect key="frame" x="113.5" y="0.0" width="177" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="lSJ-O9-rrQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type du pokemon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-eB-kjW">
-                                        <rect key="frame" x="114" y="50" width="176.5" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-eB-kjW">
+                                        <rect key="frame" x="175.5" y="50" width="53.5" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="GYZ-jw-g4h"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1C-VM-9It">
-                                        <rect key="frame" x="0.0" y="85" width="404" height="664"/>
+                                        <rect key="frame" x="15" y="85" width="374" height="664"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r1C-VM-9It" secondAttribute="trailing" constant="15" id="gO2-ON-kwY"/>
+                                    <constraint firstItem="r1C-VM-9It" firstAttribute="leading" secondItem="Nfk-TK-nC5" secondAttribute="leading" constant="15" id="jNi-Mw-mhF"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VQi-B0-jPB" appends="YES" id="7WZ-ay-6BV"/>
                                 </connections>
@@ -336,9 +340,6 @@
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="star" catalog="system" width="128" height="116"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -350,6 +351,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
