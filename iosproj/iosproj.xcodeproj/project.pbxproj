@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C94EF0258B955100B60610 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C94EEF258B955100B60610 /* ContactView.swift */; };
 		85475D4F258963D00018D09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475D4E258963D00018D09A /* AppDelegate.swift */; };
 		85475D51258963D00018D09A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475D50258963D00018D09A /* SceneDelegate.swift */; };
 		85475D56258963D00018D09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85475D54258963D00018D09A /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C94EEF258B955100B60610 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		4204FAD1E4ED21DB29F897E8 /* Pods_iosproj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosproj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B1F76031D6620401E822CA /* Pods-iosproj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosproj.debug.xcconfig"; path = "Target Support Files/Pods-iosproj/Pods-iosproj.debug.xcconfig"; sourceTree = "<group>"; };
 		70EE6BE0539D09F384379004 /* Pods-iosproj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosproj.release.xcconfig"; path = "Target Support Files/Pods-iosproj/Pods-iosproj.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				85475D4E258963D00018D09A /* AppDelegate.swift */,
 				85475D50258963D00018D09A /* SceneDelegate.swift */,
 				85475D54258963D00018D09A /* Main.storyboard */,
+				40C94EEF258B955100B60610 /* ContactView.swift */,
 				85475D57258963D10018D09A /* Assets.xcassets */,
 				85475D59258963D10018D09A /* LaunchScreen.storyboard */,
 				85475D5C258963D10018D09A /* Info.plist */,
@@ -272,6 +275,8 @@
 			files = (
 				85475DAB258A7DEC0018D09A /* PokemonService.swift in Sources */,
 				85475D9F258A73270018D09A /* DiscoverPokemonViewController.swift in Sources */,
+				85475D96258A5CEB0018D09A /* PokemonListTableViewController.swift in Sources */,
+				40C94EF0258B955100B60610 /* ContactView.swift in Sources */,
 				85475D99258A5E8C0018D09A /* PokemonDetailViewController.swift in Sources */,
 				85475DB5258B555D0018D09A /* Pokemon.swift in Sources */,
 				85475D4F258963D00018D09A /* AppDelegate.swift in Sources */,
